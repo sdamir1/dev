@@ -1,0 +1,7 @@
+a=1
+dict={'Milk':34,'Coffie':203,'Water':20,'Shake':120}
+while a!=0:
+    print('Введите название товара');
+    a=input()
+    print("Цена товара", a, " равнвна", dict[a])
+
