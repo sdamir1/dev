@@ -1,0 +1,53 @@
+from array import *
+numbers = array('i', [1, 2, 4, 5, 6, 7, 8, 9, 10])
+for i in range(len(numbers)):
+    if i+1 != numbers[i]:
+        print("Пропущено число: ", i+1)
+        break
+pov=array('i',[1,2,3,4,4,5,6,7,8,9,10])
+for i in range(len(pov)):
+    for j in range(i+1, len(pov)):
+       if pov[i]==pov[j]:
+            print('Повторяется', pov[j],' элемент')
+        break
+
+mm=array('i',[1,2,3,4,5,6,7,8,9,10,-2])
+print('Наибольшее значение: ', min(mm))
+print('Наибольшее значение: ', max(mm))
+
+par=array('i',[1,2,3,4,4,5,6,7,8,9,10])
+s = int(input("Введите число: "))
+for i in range(len(par)):
+    for j in range(i+1, len(par)):
+        if par[i]+ par[j] == s:
+            print(par[i], par[j])
+
+pov=array('i',[1,2,3,4,4,5,6,7,7,8,9,9,10])
+for i in range(len(pov)):
+    for j in range(i+1, len(pov)):
+        if pov[i]==pov[j]:
+            print('Повторяется', pov[j],' элемент')
+        
+pov=array('i',[1,2,3,4,4,5,6,7,7,8,9,9,10])
+for i in range(len(pov)):
+    for j in range(i+1, len(pov)-1):
+        if pov[i]==pov[j]:
+            del pov[j]
+print(pov)
+
+def sort(nums):  
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(len(nums) - 1):
+            if nums[i] > nums[i + 1]:
+                nums[i], nums[i + 1] = nums[i + 1], nums[i]
+                swapped = True
+
+random = [5, 2, 1, 8, 4]  
+sort(random)  
+print(random)
+
+mas = array('i', [1,2,3,4,5,6,7,8,9,10])
+mas=list(reversed(mas))
+print(mas)
